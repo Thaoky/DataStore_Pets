@@ -97,11 +97,11 @@ local function _GetBattlePetInfoFromLink(link)
 end
 
 DataStore:OnAddonLoaded(addonName, function() 
-	DataStore:RegisterNewModule({
+	DataStore:RegisterModule({
 		addon = addon,
 		addonName = addonName,
 		rawTables = {
-			"DataStore_Pets_GUIDs"
+			"DataStore_Pets_GUIDs"			-- ["petGUID"] = modelID
 		},
 		characterTables = {
 			["DataStore_Pets_Characters"] = {
@@ -119,10 +119,7 @@ DataStore:OnAddonLoaded(addonName, function()
 		return format("|cff71d5ff|Hspell:%s|h[%s]|h|r", spellID, name)
 	end)
 	
-	DataStore:RegisterMethod(addon, "GetCompanionList", function()
-		return addon.CompanionList
-	end)
-	
+	DataStore:RegisterMethod(addon, "GetCompanionList", function() return addon.CompanionList end)
 	DataStore:RegisterMethod(addon, "GetCompanionSpellID", function(itemID)
 		-- returns spellID if itemID is known, nil otherwise
 		return addon.CompanionToSpellID[itemID]
