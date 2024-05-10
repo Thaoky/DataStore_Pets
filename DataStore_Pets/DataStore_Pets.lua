@@ -71,6 +71,7 @@ local function _GetPetInfo(pets, index)
 		return modelID, name, guid, icon
 	end
 end
+--]]
 
 local function _IsPetKnown(spellID)
 	
@@ -84,7 +85,6 @@ local function _IsPetKnown(spellID)
 	
 	return petGUIDs[petID] and true or false
 end
---]]
 
 local function _GetBattlePetInfoFromLink(link)
 	if not link then return end
