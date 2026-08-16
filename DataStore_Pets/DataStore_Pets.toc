@@ -1,10 +1,10 @@
-## Interface: 120007
+## Interface: 120100
 ## Title: DataStore_Pets
 ## IconTexture: Interface\Icons\garrison_building_storehouse
 
 ## Notes: Stores information about character pets and mounts
 ## Author: Thaoky (EU-Marécages de Zangar)
-## Version: 2026.07.10
+## Version: 2026.08.16
 ## Dependencies: AddonFactory, DataStore
 ## SavedVariables: DataStore_Pets_Characters, DataStore_Pets_GUIDs
 ## X-Category: Interface Enhancements
