@@ -17,7 +17,7 @@ local function GetPetReference(guid)
 	local name, icon
 	
 	if modelID then
-		local info = C_PetJournal.GetPetInfoTableByPetID(guid)
+		local info = nil; if guid and C_PetJournal and C_PetJournal.GetPetInfoTableByPetID then local ok, i = pcall(C_PetJournal.GetPetInfoTableByPetID, guid); if ok then info = i end end
 		if info then
 			name = info.name
 			icon = info.icon
